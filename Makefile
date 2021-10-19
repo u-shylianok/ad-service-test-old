@@ -14,9 +14,9 @@ down:
 	docker-compose down
 
 clean:
+	rm build/app/ad-service
 	docker stop ad-service-app ad-service-db-pg
 	docker rm ad-service-app ad-service-db-pg
-	rm build/app/ad-service
 
 cleanall: clean
 	docker rmi ad-service-app ad-service-db-pg
